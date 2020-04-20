@@ -79,7 +79,7 @@ export default class EditTodo extends Component {
 
         }
         
-        //code below to remove todo (NEED TO FIX)
+                    //code below to remove todo (NEED TO FIX)
         removeTodo(e){
                 e.preventDefault();
 
