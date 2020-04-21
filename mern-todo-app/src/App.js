@@ -19,7 +19,7 @@ function App() {
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
               <Link to="/" className="navbar-brand">Mern Todo App</Link>
-              <div className="collapse nav-collapse">
+              <div className="">
                   <ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
                       <Link to="/" className="nav-link">Todos</Link>
