@@ -17,7 +17,7 @@ export default class EditTodo extends Component {
             todo_description: '', 
             todo_responsible: '', 
             todo_priority: '', 
-            todo_completed: false  
+            todo_completed: false
         }
     }
 
@@ -77,7 +77,7 @@ export default class EditTodo extends Component {
                     //code below lets the user go back to the home page once they submit the update
             this.props.history.push('/'); 
 
-        }
+            }
         
                     //code below to remove todo (NEED TO FIX)
         removeTodo(e){
@@ -90,9 +90,11 @@ export default class EditTodo extends Component {
                     todo_completed: this.state.todo_completed
                 }; 
             
-                if (this.props.match.params.id) {
-                  this.props.removeClick(obj);
-                }
+                axios.delete('http://localhost:4000/todos/update/'+this.props.match.params.id, obj)
+                .then(res => console.log(res.data)); 
+
+                //code below lets the user go back to the home page once they submit the update
+            this.props.history.push('/'); 
               };
 
 
@@ -177,8 +179,9 @@ export default class EditTodo extends Component {
                         <input type="submit" value="Update Todo" className="btn btn-primary"/>
                     </div>
 
+                    {/* //BELOW IS THE CODE FOR THE DELETE BUTTON// */}
                     <div className="form-group">
-                        <input type="submit" onClick={this.removeTodo} className="btn btn-primary"/>
+                        <input type="delete" onClick={this.removeTodo} className="btn btn-primary"/>
                     </div>
 
 
