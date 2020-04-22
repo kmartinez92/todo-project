@@ -18,8 +18,13 @@ function App() {
 
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+<<<<<<< HEAD:client/src/App.js
               <Link to="/" className="navbar-brand">Todoz</Link>
               <div className="collapse nav-collapse">
+=======
+              <Link to="/" className="navbar-brand">Mern Todo App</Link>
+              <div className="">
+>>>>>>> 71cc7cc418e10d17e3f640ab09fee6e3a2416488:mern-todo-app/src/App.js
                   <ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
                       <Link to="/" className="nav-link">Todoz</Link>
